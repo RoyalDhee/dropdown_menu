@@ -1,3 +1,8 @@
+:root {
+    --primary-color: coral;
+    --secondary-color: chocolate;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -11,7 +16,7 @@ body{
 }
 
 #navbar ul{
-    list list-style: none;
+    list-style: none;
 }
 
 #navbar ul li{
@@ -33,10 +38,76 @@ body{
 
 #navbar ul li:hover {
     cursor: pointer;
-    background: coral;
+    background: var(--primary-color);
     color: #fff;
 }
 
 #navbar ul li a:hover{
     color: #fff;
+}
+
+/* Nested Dropdown display */
+
+#navbar ul li:hover ul {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 200px;
+    margin-top: 1rem;
+}
+
+#navbar ul li:hover ul li {
+    display: block;
+    background: #e7e7e7;
+}
+
+#navbar ul li:hover ul li a {
+    color: #333;
+}
+
+#navbar ul li:hover ul li:hover {
+    background: #e0e0e0;
+    color: inherit;
+}
+
+#navbar ul li:hover ul li span {
+    float: right;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+    border-radius: 5px;
+}
+
+#navbar ul li:hover ul li:hover span {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+#showcase{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    padding: 0 2rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background: var(--primary-color);
+}
+
+#showcase h1 {
+    color: #fff;
+    font-size: 4rem;
+}
+
+@media(max-width: 600px) {
+    #navbar ul li {
+        display: block;
+    }
+
+    #navbar ul li:hover ul{
+        position: relative;
+        width: 100%;
+    }
 }
