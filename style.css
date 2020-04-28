@@ -88,12 +88,14 @@ body{
 #showcase{
     display: flex;
     flex-direction: column;
-    height: 500px;
+    height: 100vh;
     padding: 0 2rem;
     align-items: center;
     text-align: center;
     justify-content: center;
-    background: var(--primary-color);
+    background: url(/batman_arkham_asylum_game-1920x1200.jpg) no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
 #showcase h1 {
